@@ -1,0 +1,407 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+:root{
+    /* ===== Colors ===== */
+    --primary-color: #0E4BF1;
+    --panel-color: #FFF;
+    --text-color: #000;
+    --black-light-color: #707070;
+    --border-color: #e6e5e5;
+    --toggle-color: #DDD;
+    --box1-color: #4DA3FF;
+    --box2-color: #FFE6AC;
+    --box3-color: #E7D1FC;
+    --title-icon-color: #fff;
+    
+    /* ====== Transition ====== */
+    --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s ease;
+    --tran-03: all 0.2s ease;
+}
+.toba{
+    margin-top: 40px;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #F0F2F5;
+}
+body.dark{
+    --primary-color: #3A3B3C;
+    --panel-color: #242526;
+    --text-color: #CCC;
+    --black-light-color: #CCC;
+    --border-color: #4D4C4C;
+    --toggle-color: #FFF;
+    --box1-color: #3A3B3C;
+    --box2-color: #3A3B3C;
+    --box3-color: #3A3B3C;
+    --title-icon-color: #CCC;
+}
+/* === Custom Scroll Bar CSS === */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0b3cc1;
+}
+
+body.dark::-webkit-scrollbar-thumb:hover,
+body.dark .activity-data::-webkit-scrollbar-thumb:hover{
+    background: #3A3B3C;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background-color: var(--panel-color);
+    border-right: 1px solid var(--border-color);
+    transition: var(--tran-05);
+    
+}
+nav.close{
+    width: 73px;
+}
+nav .logo-name{
+    display: flex;
+    align-items: center;
+    
+}
+nav .logo-image{
+    display: flex;
+    justify-content: center;
+    margin-top:10px;
+    margin-left: 26px;
+    
+}
+nav .logo-image img{
+    width: 150px;
+    height: 60px;
+    
+}
+
+
+nav.close .logo_name{
+    opacity: 0;
+    pointer-events: none;
+}
+nav .menu-items{
+    margin-top: 25px;
+    height: calc(100% - 130px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu-items li{
+    list-style: none;
+    margin-left: -25px;
+}
+.menu-items li a{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    text-decoration: none;
+    position: relative;
+}
+.nav-links li a:hover:before{
+    content: "";
+    position: absolute;
+    left: -7px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+body.dark li a:hover:before{
+    background-color: var(--text-color);
+}
+.menu-items li a i{
+    font-size: 24px;
+    min-width: 45px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black-light-color);
+}
+.menu-items li a .link-name{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--black-light-color);    
+    transition: var(--tran-05);
+}
+nav.close li a .link-name{
+    opacity: 0;
+    pointer-events: none;
+}
+.nav-links li a:hover i,
+.nav-links li a:hover .link-name{
+    color: var(--primary-color);
+}
+body.dark .nav-links li a:hover i,
+body.dark .nav-links li a:hover .link-name{
+    color: var(--text-color);
+}
+.menu-items .logout-mode{
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+
+.dashboard{
+    position: relative;
+    left: 250px;
+    background-color: var(--panel-color);
+    min-height: 60px;
+    width: calc(100% - 250px);
+    padding: 10px 14px;
+    transition: var(--tran-05);
+    
+}
+nav.close ~ .dashboard{
+    left: 73px;
+    width: calc(100% - 73px);
+}
+.dashboard .top{
+    position: fixed;
+    top: 0;
+    left: 250px;
+    min-height: 60px;
+    display: flex;
+    width: calc(100% - 250px);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background-color: var(--panel-color);
+    transition: var(--tran-05);
+    z-index: 10;
+    
+}
+nav.close ~ .dashboard .top{
+    left: 73px;
+    width: calc(100% - 73px);
+}
+.dashboard .top .search-box{
+    position: relative;
+    height: 45px;
+    max-width: 400px;
+    width: 100%;
+    margin-left: 100px;
+
+}
+.top .search-box input{
+    position: absolute;
+    border: 1px solid var(--border-color);
+    background-color: var(--panel-color);
+    padding: 0 25px 0 50px;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+}
+.top .search-box i{
+    position: absolute;
+    left: 15px;
+    font-size: 22px;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--black-light-color);
+}
+.top img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+.bvb {
+    position: absolute;
+    margin-left: 75%;
+}
+.bvb i{
+    font-size: 32px;
+    color: #2194FF;
+}
+.host img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 60%;
+}
+.user p{
+    margin-left: -25%;
+    margin-top: 12px;
+}
+.ti{
+    font-size: 27px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 20px;
+    margin-left:2%;
+}
+.tx p{
+    font-size: 27px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 20px;
+    margin-left:-2%;
+}
+.ww{
+    margin-top: 20px;
+
+    background-color: transparent;
+    width: 400px;
+    height: 40px;
+    position: relative;
+}
+.ww input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0px 40px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    font-size: 16px;
+    background-color: transparent;
+}
+.ww i{
+    position: absolute;
+    top:50%;
+    color: #000;
+    margin-left: 10px;
+    font-size: 23px;
+
+    transform: translateY(-65%);
+
+
+}
+.ww p{
+    margin-left: 40px;
+    font-size: 17px;
+    font-weight: 450;
+}
+.ww i.icon{
+    left:0px;
+}
+.ww i.hide{
+    color: #999;
+    right: -80px;
+}
+.ww input:is(:focus, :valid){
+    border-bottom-color:#2567cf ;
+}
+
+.ww input:is(:focus, :valid) ~ i{
+    color: #2567cf;
+}
+.form{
+    position:absolute ;
+    left: 36%;
+    top: 620px;
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    height: auto;
+    padding: 30px;
+    border-radius: 20px;
+    font-family: 'Rubik', sans-serif;
+}
+.cvv{
+    margin-left: 10px;
+}
+.op{
+    margin-top: 30px;
+    margin-left: 13%;
+}
+.op h5{
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: -40px;
+}
+.time{
+    margin-left: 40px;
+}
+#des{
+    margin-top: 15px;
+    margin-left: -35px;
+}
+#desc {
+    margin-top: 30px;
+    margin-left: 0px;
+}
+.cover{
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-left: -35px;
+}
+.der h4{
+    font-size: 22px;
+    margin-top: 30px;
+    margin-left: -35px;
+}
+.der h5{
+    font-size: 18px;
+    margin-left: 0px;
+    margin-top: 15px;
+}
+.lab{
+    margin-left: 40px;
+}
+.xxx{
+    margin-left: 240px;
+    margin-top: -220px;
+    font-size: 18px;
+}
+.xx{
+    margin-left: 240px;
+    margin-top: -180px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.x{
+    margin-left: 240px;
+    margin-top: -130px;
+    font-size: 18px;
+}
+.enh{
+    height:inherit;
+}
+.ql{
+   margin-left: -3%;
+   font-size: 15px;
+   margin-top: 7px;
+}
+.ip{
+    margin-top: 20px;
+}
+.ccc{
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: -10px;
+}

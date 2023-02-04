@@ -1,0 +1,315 @@
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #c3d2e5;
+    }
+
+.ss{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+}
+form{
+    position:absolute ;
+    right: 35%;
+    top: 70px;
+    background-color: white;
+    width: 300px;
+    height: 420px;
+    padding: 30px;
+    border-radius: 20px;
+    font-family: 'Rubik', sans-serif;
+}
+.ti{
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 5px;
+}
+.ti::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 20px;
+    height: 3px;
+    background-color: #2567cf;
+    border-radius: 20px;
+}
+.ww{
+    margin-top: 30px;
+    background-color: aqua;
+    width: 215px;
+    height: 40px;
+    position: relative;
+}
+.ww input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0px 40px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    font-size: 16px;
+}
+.ww i{
+    position: absolute;
+    top:50%;
+    font-size: 23px;
+    color: #999;
+    transform: translateY(-50%);
+
+}
+.ww i.icon{
+    left:0px;
+}
+.ww i.hide{
+    color: #999;
+    right: -80px;
+}
+.ww input:is(:focus, :valid){
+    border-bottom-color:#2567cf ;
+}
+
+.ww input:is(:focus, :valid) ~ i{
+    color: #2567cf;
+}
+
+.div a{
+    text-decoration: none;
+    color: black;
+    margin-right: 0px;
+
+}
+.div a:hover{
+    color: #2567cf;
+    text-decoration: underline;
+}
+.qwe input{
+    accent-color:#c3d2e5 ;
+    margin-right: 8px;
+}
+.btn{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin-top: 50px;
+}
+.btn button{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 21px;
+    font-weight: 500;
+    background-color: #2567cf;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn button:hover{
+    background-color: #6f94d1;
+}
+.btnp{
+    position: absolute;
+    width: 40%;
+    height: 55px;
+
+}
+.btnp button{
+    width: 100%;
+    height: 100%;
+    background-color: #2567cf;
+    border: none;
+    border-radius: 15px;
+    margin-left: 60%;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+
+}
+.btnp button:hover{
+    background-color: #6f94d1;}
+
+    .bg-modal{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7) ;
+        position: absolute;
+        top: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Rubik', sans-serif;
+       
+    }
+    .modal-content{
+        width: 360px;
+        height:500px;
+        background-color: white;
+        padding: 30px;
+        position:absolute;
+        border-radius: 25px;
+        
+    }
+    .cc{
+    margin-top: 30px;
+    background-color: aqua;
+    width: 240px;
+    height: 40px;
+    position: relative;
+    }
+    .aaa{
+        margin-left: 11px;
+    }
+    .cc input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0px 40px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    font-size: 16px;
+   
+    }
+    .cc i{
+        position: absolute;
+        top:50%;
+        font-size: 23px;
+        color: #999;
+        transform: translateY(-50%);
+    }
+    .cc i.hide{
+        color: #999;
+        right: -80px;}
+
+        .radio-container {
+            font-size: 18px;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+            margin-left: -160px;
+          }
+          input[type="radio"] {
+            display: none;
+          }
+          .labelx {
+            position: relative;
+            cursor: pointer;
+            font-weight:500;
+            color: #999;
+            padding-right: 60px;
+            margin-left: 50px;
+          }
+          .labelx:nth-last-child(1) {
+            padding-right: 0;
+          }
+          .labelx::before {
+            content: "";
+            border: 2px solid #999;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin: -5px 10px;
+            margin-left: 1px;
+            border-radius: 50%;
+          }
+          .labelx::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            border-color: #2567cf;
+            background: rgba(34, 34, 34, 0);
+            left: 5px;
+            top: 12px;
+            margin: -6px 12px;
+            margin-left: 0;
+            border-radius: 50%;
+          
+            transition: all 0.4s;
+          }
+          input[type="radio"]:checked + .labelx::after {
+            background: #2567cf;
+          }
+          input[type="radio"]:checked + .labelx::before {
+            border: 2px solid #2567cf;
+          }
+          input[type="radio"]:checked + .labelx {
+            color: #2567cf;
+        }
+          .ppp{
+              margin-top: 30px;
+              font-size: 18px;
+              font-weight: 600;
+          }
+          .ps{
+              margin-top: 0%;
+              font-size: 18px;
+              font-weight: 600;
+          }
+          .nn :is(:focus, :valid){
+            border-color:#2567cf ;}
+            .bvv{
+                width: 100%;
+                height: 40px;
+                position: relative;
+                margin-top: 25px;}
+            .bvv button{
+                position:absolute;
+                width: 95%;
+                height: 100%;
+                font-size: 21px;
+                font-weight: 500;
+                background-color: #2567cf;
+                color: white;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-right: -10px;
+                margin-top: 20px;
+            }
+            .bvv button:hover{
+                background-color: #6f94d1;
+            }
+            .bbb{
+                font-size:30px;
+                position: absolute;
+                top:5px;
+                right: 10px;
+                cursor: pointer;
+            }
+            .cc input:is(:focus, :valid){
+                border-bottom-color:#2567cf ;
+            }
+            .cc input:is(:focus, :valid) ~ i{
+                color: #2567cf;
+            }
+            .radio-containers {
+                font-size: 18px;
+                padding: 0px;
+                display: flex;
+                justify-content: center;
+                margin-left: -197px;}
+
+        .img img{
+            position: absolute;
+            width: 185px;
+            height: 70px;
+            top:20px;
+            left:30px;
+
+        }
